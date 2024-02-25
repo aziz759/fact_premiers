@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="n1" />
+    <p id="a"></p>
+    <button onclick="a()">test</button>
+    <script>
+      function a() {
+        n = Number(document.getElementById("n1").value);
+        t = [];
+        b = 0;
+        i = 2;
+        while (n != 1) {
+          if (n % i === 0) {
+            n = n / i;
+            t[b] = i;
+            b = b + 1;
+          } else {
+            i = i + 1;
+          }
+        }
+        for (let i = 0; i < b; i++) {
+          document.write(t[i], (end = " | "));
+        }
+      }
+    </script>
+  </body>
+</html>
